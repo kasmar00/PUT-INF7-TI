@@ -55,9 +55,9 @@ def gen_word(probs):
 
 
 def gen_seq(probs, length=100, rank=1, starting_seq=["probability", "of", "words", "is"]):
-    prev = starting_seq[-rank:]
-    print("prev:", prev)
-    s = starting_seq
+    prev = starting_seq[:rank]
+    print("Starting sequence:", prev)
+    s = prev.copy()
 
     for _ in range(length):
         word = gen_word(probs.get(DictKey(prev)))
@@ -200,21 +200,23 @@ def prod():
     print("Solution")
     global should_print
     should_print = False
-    with open("dane/norm_hamlet.txt") as f:
+    with open("dane/norm_wiki_sample.txt") as f:
         corpus = f.read().split(" ")
         for rank in [1, 2]:
+            print("Generating probabilities")
             mprobs = gen_markov_probs(corpus, rank)
-            print(dictToString(mprobs)[:250])
+            print("Generating sequence")
             seq = gen_seq(mprobs, 1000, rank)
             seq = " ".join(seq)
             with open(f"gen_{rank}.txt", "w") as f2:
                 f2.write(seq)
+            print(f"Generated text saved to file: gen_{rank}.txt")
             print(
                 f"Average word len for rank {rank}: {average_word(seq)}")
 
 
 def main():
-    test()
+    # test()
     prod()
 
 

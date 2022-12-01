@@ -57,9 +57,11 @@ def take_second(elem):
 # https: // www.cs.princeton.edu/courses/archive/fall13/cos126/assignments/markov.html
 def ngrams(corpus: str, length: int):
     ret = []
+    dcorpus = corpus*2
     for i in range(len(corpus)):
-        tmp = corpus[i:] + corpus[:i]
-        ret.append(tmp[:length])
+        ret.append(dcorpus[i:i+length])
+        # tmp = corpus[i:] + corpus[:i]
+        # ret.append(tmp[:length])
     return ret
 
 
@@ -135,11 +137,13 @@ def prod():
     print("Solution")
     global should_print
     should_print = False
-    with open("data/norm_hamlet.txt") as f:
+    with open("data/norm_wiki_sample.txt") as f:
         corpus = f.read()
         for rank in [1, 3, 5]:
             mprobs = gen_markov_probs(corpus, rank)
             seq = gen_seq(mprobs, 10000, rank)
+            with open(f"gen_{rank}.txt", "w") as f2:
+                f2.write(seq)
             print(
                 f"Average word len for rank {rank}: {average_word(seq)}")
 
