@@ -1,0 +1,138 @@
+Part 1
+Entropies of norm_wiki_en.txt.txt
+  Entropies
+    Chars:  4.288221453845133
+    Words:  11.544004570912472
+  Conditional entropy for order 1:
+    Chars:  3.5166047989860187
+    Words:  6.389171738689485
+  Conditional entropy for order 2:
+    Chars:  3.018319190791138
+    Words:  2.1764580263700766
+  Conditional entropy for order 3:
+    Chars:  2.4815659195766586
+    Words:  0.4846783277647407
+  Conditional entropy for order 4:
+    Chars:  2.0211849323217086
+    Words:  0.10965303130512216
+
+Part 2
+Entropies of latin
+Entropies of norm_wiki_la.txt.txt
+  Entropies
+    Chars:  4.228247465746812
+    Words:  11.969202934125732
+  Conditional entropy for order 1:
+    Chars:  3.4501260596144276
+    Words:  4.400029202455635
+  Conditional entropy for order 2:
+    Chars:  2.8234920125311245
+    Words:  1.166889817919641
+  Conditional entropy for order 3:
+    Chars:  2.152031337421536
+    Words:  0.38804103621597946
+  Conditional entropy for order 4:
+    Chars:  1.6427637761375735
+    Words:  0.20647469069804267
+
+Part 3
+Entropies of sample0.txt.txt
+  Entropies
+    Chars:  4.273001240566633
+    Words:  7.748741386140158
+  Conditional entropy for order 1:
+    Chars:  2.9158940043478925
+    Words:  7.486391705240514
+  Conditional entropy for order 2:
+    Chars:  2.0003592449348733
+    Words:  4.406703462159543
+  Conditional entropy for order 3:
+    Chars:  1.5392818308881384
+    Words:  0.5950087061854483
+  Conditional entropy for order 4:
+    Chars:  1.4385817627111692
+    Words:  0.012062127698812566
+Entropies of sample1.txt.txt
+  Entropies
+    Chars:  4.1270061355497205
+    Words:  11.50071591820348
+  Conditional entropy for order 1:
+    Chars:  3.239149992123346
+    Words:  5.3722347996229445
+  Conditional entropy for order 2:
+    Chars:  2.8612796847871955
+    Words:  1.5747362197278814
+  Conditional entropy for order 3:
+    Chars:  2.3266847405634272
+    Words:  0.5075103012623167
+  Conditional entropy for order 4:
+    Chars:  1.813510009114478
+    Words:  0.29345749233900953
+Entropies of sample2.txt.txt
+  Entropies
+    Chars:  3.993311800232584
+    Words:  8.023869815826421
+  Conditional entropy for order 1:
+    Chars:  3.0504392827811286
+    Words:  7.348623166132961
+  Conditional entropy for order 2:
+    Chars:  2.4676602357415525
+    Words:  3.781936098873708
+  Conditional entropy for order 3:
+    Chars:  1.9397723261443967
+    Words:  0.859505963114632
+  Conditional entropy for order 4:
+    Chars:  1.7020325739558675
+    Words:  0.08199123582453278
+Entropies of sample3.txt.txt
+  Entropies
+    Chars:  3.930297834157987
+    Words:  9.061139321950034
+  Conditional entropy for order 1:
+    Chars:  3.184467067095424
+    Words:  5.950213650753629
+  Conditional entropy for order 2:
+    Chars:  2.6278957095513036
+    Words:  2.6308028503257943
+  Conditional entropy for order 3:
+    Chars:  2.023991488805842
+    Words:  1.2640892290660657
+  Conditional entropy for order 4:
+    Chars:  1.534243355401023
+    Words:  0.41432667556875635
+Entropies of sample4.txt.txt
+  Entropies
+    Chars:  4.2538095673790135
+    Words:  17.129669110943123
+  Conditional entropy for order 1:
+    Chars:  4.229101430962357
+    Words:  3.4442531122077646
+  Conditional entropy for order 2:
+    Chars:  4.226828937890972
+    Words:  0.2340760170378599
+  Conditional entropy for order 3:
+    Chars:  4.178535148281906
+    Words:  0.0032274276117648373
+  Conditional entropy for order 4:
+    Chars:  3.7661315160327113
+    Words:  7.608894145064654e-06
+Entropies of sample5.txt.txt
+  Entropies
+    Chars:  4.441688018481797
+    Words:  16.509543070990595
+  Conditional entropy for order 1:
+    Chars:  3.523098126085035
+    Words:  -0.0
+  Conditional entropy for order 2:
+    Chars:  3.2506208546492124
+    Words:  -0.0
+  Conditional entropy for order 3:
+    Chars:  2.834271485651657
+    Words:  -0.0
+  Conditional entropy for order 4:
+    Chars:  2.1724407900555236
+    Words:  -0.0
+
+
+
+

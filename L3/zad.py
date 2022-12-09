@@ -1,12 +1,3 @@
-# Aby wyliczyć entropię znaków i słów oraz ich entropię warunkową dla danych zawartych w pliku, należy wykonać następujące kroki:
-
-# Otworzyć plik w trybie do odczytu.
-# Odczytać dane z pliku i zapisać je w zmiennej.
-# Dla każdego znaku lub słowa w danych obliczyć jego prawdopodobieństwo wystąpienia.
-# Obliczyć entropię znaków lub słów jako sumę prawdopodobieństw poszczególnych znaków lub słów pomnożonych przez logarytm dwójkowy prawdopodobieństwa.
-# Obliczyć entropię warunkową kolejnych rzędów dla danych znaków lub słów, wyznaczając prawdopodobieństwo wystąpienia danego znaku lub słowa w zależności od poprzedniego znaku lub słowa i obliczając entropię w taki sam sposób jak w kroku 4.
-# Oto przykładowy program w pythonie, który wylicza entropię znaków i słów oraz ich entropię warunkową kolejnych rzędów dla danych zawartych w pliku:
-
 import math
 import collections
 
@@ -37,33 +28,12 @@ class DictKey():
 
 
 def calculate_entropy(data):
-    # liczymy częstotliwość wystąpień każdego elementu
     counter = collections.Counter(data)
     entropy = 0
-    # dla każdego elementu obliczamy entropię i dodajemy do wyniku
     for count in counter.values():
         probability = count / len(data)
         entropy += - probability * math.log2(probability)
     return entropy
-
-
-def calculate_conditional_entropy_ai(data, order):
-    # tworzymy słownik, w którym kluczami będą ciągi znaków o długości "order"
-    # a wartościami - listy znaków, które występują po tych ciągach
-    conditional_entropy = {}
-    for i in range(len(data)-order):
-        sequence = data[i:i+order]
-        next_item = data[i+order]
-        if sequence in conditional_entropy:
-            conditional_entropy[sequence].append(next_item)
-        else:
-            conditional_entropy[sequence] = [next_item]
-    # obliczamy entropię dla każdego ciągu znaków i sumujemy
-    entropy = 0
-    for sequence in conditional_entropy:
-        entropy += calculate_entropy(conditional_entropy[sequence])
-    # zwracamy entropię warunkową, czyli entropię podzieloną przez liczbę ciągów znaków
-    return entropy / len(conditional_entropy)
 
 
 def gen_sequences(data, order):
@@ -100,7 +70,7 @@ def calculate_conditional_entropy(data, order):
 # print(gen_sequences("abcdeffedcba", 1))
 
 # print(calculate_conditional_entropy("abcdeffedcba", 1))
-# print(calculate_conditional_entropy("abcdeffedcba", 2))o
+# print(calculate_conditional_entropy("abcdeffedcba", 2))
 
 def print_entropies_for_file(filename):
     print(f"Entropies of {filename}.txt")
@@ -116,7 +86,6 @@ def print_entropies_for_file(filename):
         for i in range(1, 5):
             print(f"  Conditional entropy for order {i}:")
             print("    Chars: ", calculate_conditional_entropy(data, i))
-            # TODO: w fix for words - list of words cant be a key of dict
             print("    Words: ", calculate_conditional_entropy(words, i))
 
 

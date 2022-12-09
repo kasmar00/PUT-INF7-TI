@@ -1,0 +1,8 @@
+Wnioski:
+Dla języków naturalnych widać spadek entropii  zarówno po znakach (o ok. 1 per stopień) oraz na słowach (o ok. połowę per stopień).
+Takie własności maja entropie dla zbiorów sample1 i sample3, należy uznać że są one językami naturalnymi.
+
+Pozostałe nie odpowiadają tym trendom:
+sample0, sample2 - entropia po słowach zerowego i pierwszego rzędu jest prawie równa, dodatkowo entropia 4 rzędu jest bardzo bliska zeru - spada zbyt gwałtownie
+sample4 - entropia po znakach jest  równa dla wszystkich rzędów
+sample5 - entropia warunkowa wszystkich rzędów jest bardzo bliska zeru
